@@ -86,6 +86,103 @@ nav {
     box-shadow: 0 4px 12px rgba(46, 64, 82, 0.3);
 }
 
+/* About Me Section */
+
+#aboutme {
+    padding: 5rem;
+    background-color:#1F2A37;
+    margin-bottom: 5rem;
+    color: white;
+}
+
+/* About Me Section */
+
+#about {
+    padding: 5rem;
+    background: linear-gradient(135deg, #f6fbff 0%, #edf4ff 100%);
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    align-items: center;
+    gap: 3rem;
+}
+
+.about-image {
+    display: flex;
+    justify-content: center;
+}
+
+.about-image img {
+    width: min(100%, 380px);
+    border-radius: 2rem;
+    box-shadow: 0 20px 40px rgba(46, 64, 82, 0.18);
+    border: 6px solid #ffffff;
+    object-fit: cover;
+}
+
+.about-content {
+    color: #1f2a37;
+}
+
+.section-tag {
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    background: rgba(92, 166, 230, 0.12);
+    color: #2d6ea8;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+.about-content h2 {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    margin: 0 0 1rem;
+    line-height: 1.2;
+}
+
+.about-content p {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    color: #3d4d5e;
+}
+
+.about-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.about-stats div {
+    flex: 1 1 120px;
+    background: #ffffff;
+    border: 1px solid rgba(46, 64, 82, 0.08);
+    border-radius: 1rem;
+    padding: 1.2rem 1rem;
+    box-shadow: 0 12px 24px rgba(46, 64, 82, 0.06);
+    text-align: center;
+}
+
+.about-stats strong {
+    display: block;
+    font-size: 1.5rem;
+    color: #2e4052;
+    margin-bottom: 0.3rem;
+}
+
+.about-stats span {
+    font-size: 0.9rem;
+    color: #56677a;
+}
+
 /* Skills Section */
 
 #skills {
@@ -156,14 +253,14 @@ nav {
     padding: 2rem;
     width: 300px;
     display: flex;
-    flex-direction: column;
+    flex-direction:column;
     align-items: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
     cursor: pointer;
 }
 
 .testimoni-card:hover {
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 20px #2E4052;
     transform: translateY(-5px);
 }
 
@@ -230,6 +327,19 @@ nav {
         text-align: center;
     }
 
+    #about {
+        padding: 2rem;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .about-content p {
+        text-align: left;
+    }
+
     #skills {
         padding: 2rem;
     }
@@ -258,6 +368,15 @@ nav {
         width: min(100%, 220px);
         box-sizing: border-box;
     }
+
+    .contact-form {
+        padding: 1.25rem;
+        border-radius: 16px;
+    }
+
+    #kontak {
+        padding: 3rem 1.25rem;
+    }
 }
 
 /* Contact Section */
@@ -268,27 +387,30 @@ nav {
     justify-content: center;
     flex-direction: column;
     padding: 5rem;
-    background-color: #A5C9CA;
+    background: linear-gradient(180deg, #a5c9ca 0%, #cfe7ea 100%);
 }
 
 #kontak h2 {
     font-size: 35px;
     margin-bottom: 1rem;
+    color: #1f2a37;
 }
 
 #kontak > p {
     font-size: 18px;
     margin-bottom: 2rem;
+    color: #1f2a37;
 }
 
 .contact-form {
-    background-color: white;
+    background: rgba(255, 255, 255, 0.88);
     padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 20px 45px rgba(46, 64, 82, 0.12);
     width: 100%;
-    max-width: 500px;
+    max-width: 700px;
     margin-bottom: 2rem;
+    border: 1px solid rgba(46, 64, 82, 0.08);
 }
 
 .form-group {
@@ -299,59 +421,91 @@ nav {
 
 .form-group label {
     font-weight: 600;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.6rem;
     color: #2E4052;
     font-size: 14px;
 }
 
 .form-group input,
 .form-group textarea {
-    padding: 0.75rem;
-    border: 2px solid #ddd;
-    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.9rem 1rem;
+    border: 1.5px solid #dfe9f2;
+    border-radius: 12px;
     font-family: "Poppins", sans-serif;
     font-size: 14px;
-    transition: border-color 0.3s ease;
+    background: #f8fbff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: rgb(106, 106, 232);
-    box-shadow: 0 0 5px rgba(106, 106, 232, 0.3);
+    border-color: #5b7cff;
+    box-shadow: 0 0 0 4px rgba(91, 124, 255, 0.12);
+    background: white;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 140px;
 }
 
 .submit-btn {
     width: 100%;
-    padding: 0.75rem;
-    background-color: rgb(106, 106, 232);
+    padding: 0.9rem 1.2rem;
+    background: linear-gradient(135deg, #2E4052, #4b6b8a);
     color: white;
     border: none;
-    border-radius: 8px;
+    border-radius: 12px;
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
     font-family: "Poppins", sans-serif;
+    box-shadow: 0 12px 24px rgba(46, 64, 82, 0.25);
 }
 
 .submit-btn:hover {
-    background-color: #4747d9;
     transform: translateY(-2px);
+    box-shadow: 0 16px 28px rgba(46, 64, 82, 0.3);
 }
 
 .contact-info {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 1rem;
-    text-align: center;
-    font-size: 16px;
+    width: 100%;
+    max-width: 650px;
+    margin-top: 1rem;
+}
+
+.contact-info p {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+    background: rgba(255, 255, 255, 0.75);
+    color: #2E4052;
+    border: 1px solid rgba(46, 64, 82, 0.12);
+    border-radius: 999px;
+    padding: 0.9rem 1.3rem;
+    margin: 0;
+    font-weight: 500;
+    box-shadow: 0 8px 18px rgba(46, 64, 82, 0.08);
+}
+
+.contact-info i {
+    color: #2E4052;
+    font-size: 1rem;
 }
 
 .contact-info a {
     color: #2E4052;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .contact-info a:hover {
